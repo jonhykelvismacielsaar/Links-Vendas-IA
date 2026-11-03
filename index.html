@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>Links Vendas IA — Achadinhos e Ofertas 🛒</title>
+  <meta name="description" content="Todos os produtos que eu indico nos vídeos, num lugar só. Toque num produto pra ver o preço e comprar com segurança no Mercado Livre." />
+  <meta name="theme-color" content="#17122e" />
+
+  <!-- Compartilhamento (WhatsApp / Instagram / Telegram) -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="🛒 Links Vendas IA — Meus Achadinhos" />
+  <meta property="og:description" content="Toque num produto pra ver o preço e comprar com segurança no Mercado Livre. Atualizado com os vídeos do Instagram!" />
+  <meta property="og:locale" content="pt_BR" />
+
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🛒</text></svg>" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="bg" aria-hidden="true">
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+    <div class="blob blob-3"></div>
+  </div>
+
+  <main class="wrap">
+    <!-- ===== CABEÇALHO / PERFIL ===== -->
+    <header class="perfil">
+      <div class="avatar" aria-hidden="true">🛍️</div>
+      <h1 id="loja-nome">Links Vendas IA</h1>
+      <p class="sub" id="loja-sub"></p>
+
+      <div class="acoes">
+        <a id="btn-instagram" class="btn btn-insta" href="#" target="_blank" rel="noopener" hidden>
+          <span aria-hidden="true">📸</span> Instagram
+        </a>
+        <button id="btn-compartilhar" class="btn btn-share" type="button">
+          <span aria-hidden="true">🔗</span> Compartilhar
+        </button>
+      </div>
+
+      <div class="selos" aria-label="Benefícios">
+        <span>✅ Compra segura</span>
+        <span>🚚 Entrega rápida</span>
+        <span>💳 Parcele no cartão</span>
+      </div>
+
+      <p class="contador"><strong id="contador">0 produtos</strong> <span id="atualizado"></span></p>
+    </header>
+
+    <!-- ===== BUSCA + FILTROS ===== -->
+    <section class="controles">
+      <label class="busca">
+        <span aria-hidden="true">🔍</span>
+        <input id="busca" type="search" placeholder="Buscar produto… ex: violão, notebook, Acer" autocomplete="off" />
+      </label>
+      <nav id="filtros" class="filtros" aria-label="Filtrar por categoria"></nav>
+    </section>
+
+    <!-- ===== PRODUTOS (preenchido pelo script.js) ===== -->
+    <section id="lista" aria-live="polite"></section>
+
+    <div id="vazio" class="vazio" hidden>
+      <p class="vazio-emoji" aria-hidden="true">😕</p>
+      <p>Nenhum produto encontrado.</p>
+      <p class="vazio-dica">Tente outra palavra ou toque em <strong>Todos</strong> acima.</p>
+    </div>
+
+    <!-- ===== RODAPÉ ===== -->
+    <footer class="rodape">
+      <p class="aviso">
+        ℹ️ Os links acima são de afiliado: ao comprar por eles você não paga nada a mais
+        e ainda ajuda a manter o conteúdo gratuito. Preço e estoque são atualizados na loja.
+      </p>
+      <p>Feito com ❤️ no Brasil • <span id="ano"></span></p>
+    </footer>
+  </main>
+
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+  <script src="produtos.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

@@ -3,56 +3,85 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-  <title>Links Vendas IA — Achadinhos e Ofertas 🛒</title>
-  <meta name="description" content="Todos os produtos que eu indico nos vídeos, num lugar só. Toque num produto pra ver o preço e comprar com segurança no Mercado Livre." />
-  <meta name="theme-color" content="#17122e" />
+  <title>Links Vendas IA — Curadoria Premium ✦</title>
+  <meta name="description" content="Uma seleção refinada dos produtos apresentados nos vídeos. Escolha com calma e adquira com a compra protegida do Mercado Livre." />
+  <meta name="theme-color" content="#0a0a0c" />
 
   <!-- Compartilhamento (WhatsApp / Instagram / Telegram) -->
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="🛒 Links Vendas IA — Meus Achadinhos" />
-  <meta property="og:description" content="Toque num produto pra ver o preço e comprar com segurança no Mercado Livre. Atualizado com os vídeos do Instagram!" />
+  <meta property="og:title" content="✦ Links Vendas IA — Curadoria Premium" />
+  <meta property="og:description" content="Produtos selecionados a dedo, apresentados nos vídeos. Compra protegida no Mercado Livre." />
   <meta property="og:locale" content="pt_BR" />
 
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🛒</text></svg>" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='46' fill='%230a0a0c'/><circle cx='50' cy='50' r='44' fill='none' stroke='%23c6a15b' stroke-width='4'/><text x='50' y='66' font-size='42' text-anchor='middle' fill='%23e8cf9a' font-family='Georgia'>L</text></svg>" />
+
+  <!-- Tipografia de alto padrão -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <!-- Fundo: brilhos dourados + textura fina -->
   <div class="bg" aria-hidden="true">
-    <div class="blob blob-1"></div>
-    <div class="blob blob-2"></div>
-    <div class="blob blob-3"></div>
+    <div class="halo halo-1"></div>
+    <div class="halo halo-2"></div>
+    <div class="halo halo-3"></div>
+    <div class="graao"></div>
   </div>
 
   <main class="wrap">
+    <!-- ===== MASTHEAD ===== -->
+    <p class="masthead revelar"><span class="linha"></span> Coleção Particular <span class="linha"></span></p>
+
     <!-- ===== CABEÇALHO / PERFIL ===== -->
     <header class="perfil">
-      <div class="avatar" aria-hidden="true">🛍️</div>
-      <h1 id="loja-nome">Links Vendas IA</h1>
-      <p class="sub" id="loja-sub"></p>
+      <div class="avatar revelar" aria-hidden="true">
+        <span class="avatar-iniciais" id="avatar-iniciais">LV</span>
+        <span class="avatar-selo" title="Curadoria verificada">✦</span>
+      </div>
 
-      <div class="acoes">
+      <p class="eyebrow revelar">Curadoria Exclusiva</p>
+      <h1 id="loja-nome" class="revelar">Links Vendas IA</h1>
+      <div class="ornamento revelar" aria-hidden="true"><span></span>◆<span></span></div>
+      <p class="sub revelar" id="loja-sub"></p>
+
+      <div class="acoes revelar">
         <a id="btn-instagram" class="btn btn-insta" href="#" target="_blank" rel="noopener" hidden>
-          <span aria-hidden="true">📸</span> Instagram
+          <span aria-hidden="true">📸</span><span id="insta-nome">Instagram</span>
         </a>
-        <button id="btn-compartilhar" class="btn btn-share" type="button">
-          <span aria-hidden="true">🔗</span> Compartilhar
+        <button id="btn-compartilhar" class="btn btn-contorno" type="button">
+          <span aria-hidden="true">↗</span> Compartilhar
         </button>
       </div>
 
-      <div class="selos" aria-label="Benefícios">
-        <span>✅ Compra segura</span>
-        <span>🚚 Entrega rápida</span>
-        <span>💳 Parcele no cartão</span>
+      <!-- Números de confiança -->
+      <div class="vitrine-numeros revelar">
+        <div class="numero">
+          <strong id="contador">0</strong>
+          <small>Produtos<br/>selecionados</small>
+        </div>
+        <div class="divisor" aria-hidden="true"></div>
+        <div class="numero">
+          <strong>100%</strong>
+          <small>Compra<br/>protegida</small>
+        </div>
+        <div class="divisor" aria-hidden="true"></div>
+        <div class="numero">
+          <strong id="num-categorias">0</strong>
+          <small>Coleções<br/>em destaque</small>
+        </div>
       </div>
-
-      <p class="contador"><strong id="contador">0 produtos</strong> <span id="atualizado"></span></p>
+      <p class="atualizado revelar" id="atualizado"></p>
     </header>
 
     <!-- ===== BUSCA + FILTROS ===== -->
-    <section class="controles">
+    <section class="controles revelar">
       <label class="busca">
-        <span aria-hidden="true">🔍</span>
-        <input id="busca" type="search" placeholder="Buscar produto… ex: violão, notebook, Acer" autocomplete="off" />
+        <span class="busca-icone" aria-hidden="true">⌕</span>
+        <input id="busca" type="search" placeholder="Buscar na coleção — violão, notebook, Acer…" autocomplete="off" aria-label="Buscar produto" />
+        <kbd aria-hidden="true">Buscar</kbd>
       </label>
       <nav id="filtros" class="filtros" aria-label="Filtrar por categoria"></nav>
     </section>
@@ -61,18 +90,46 @@
     <section id="lista" aria-live="polite"></section>
 
     <div id="vazio" class="vazio" hidden>
-      <p class="vazio-emoji" aria-hidden="true">😕</p>
-      <p>Nenhum produto encontrado.</p>
-      <p class="vazio-dica">Tente outra palavra ou toque em <strong>Todos</strong> acima.</p>
+      <p class="vazio-simbolo" aria-hidden="true">✦</p>
+      <p class="vazio-tit">Nada por aqui…</p>
+      <p class="vazio-dica">Nenhum item corresponde à sua busca. Tente outra palavra ou volte para <strong>Todos</strong>.</p>
     </div>
 
+    <!-- ===== EXPERIÊNCIA / CONFIANÇA ===== -->
+    <section class="experiencia revelar">
+      <p class="eyebrow centro">A experiência</p>
+      <h2>Comprar bem é uma arte</h2>
+      <div class="ornamento" aria-hidden="true"><span></span>◆<span></span></div>
+
+      <div class="pilares">
+        <article class="pilar">
+          <div class="pilar-icone" aria-hidden="true">🛡️</div>
+          <h3>Compra protegida</h3>
+          <p>Você finaliza direto no Mercado Livre: pagamento seguro e garantia da plataforma em cada pedido.</p>
+        </article>
+        <article class="pilar">
+          <div class="pilar-icone" aria-hidden="true">✦</div>
+          <h3>Curadoria pessoal</h3>
+          <p>Nada entra nesta lista por acaso. Cada item foi escolhido e apresentado nos vídeos, um a um.</p>
+        </article>
+        <article class="pilar">
+          <div class="pilar-icone" aria-hidden="true">🚚</div>
+          <h3>Entrega ágil</h3>
+          <p>Envio rápido para todo o Brasil, com rastreio em tempo real do seu pedido até a porta de casa.</p>
+        </article>
+      </div>
+    </section>
+
     <!-- ===== RODAPÉ ===== -->
-    <footer class="rodape">
+    <footer class="rodape revelar">
+      <div class="ornamento" aria-hidden="true"><span></span>◆<span></span></div>
+      <p class="assinatura" id="rodape-nome">Links Vendas IA</p>
       <p class="aviso">
-        ℹ️ Os links acima são de afiliado: ao comprar por eles você não paga nada a mais
-        e ainda ajuda a manter o conteúdo gratuito. Preço e estoque são atualizados na loja.
+        Transparência, como deve ser: os links desta página são de afiliado. Ao comprar por eles,
+        você <strong>não paga nada a mais</strong> — e ainda apoia a produção dos vídeos.
+        Preço e disponibilidade são confirmados na loja no momento da compra.
       </p>
-      <p>Feito com ❤️ no Brasil • <span id="ano"></span></p>
+      <p class="creditos">Feito no Brasil · <span id="ano"></span></p>
     </footer>
   </main>
 
